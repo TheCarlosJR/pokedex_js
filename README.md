@@ -5,6 +5,8 @@ Pokedex é um catálogo de monstros fictícios da franquia "Pokemon".
 
 Neste caso, a **Pokedex JS** é totalmente **interativa** e **adaptável** aos mais diversos dispositivos de acesso tais como smarphones, tablets e computadores em geral.
 
+<img src="[image.png](https://github.com/TheCarlosJR/pokedex_js/blob/main/prints/0.png)" width="20" height="20">
+
 ![Screen Desktop #1](https://github.com/TheCarlosJR/pokedex_js/blob/main/prints/0.png "Desktop") ![Screen Smartphone #1](https://github.com/TheCarlosJR/pokedex_js/blob/main/prints/1.png "Smartphone")
 
 > O projeto foi desenvolvido com o objetivo de cumprir um desafio do **"Santander Bootcamp 2023 - Fullstack Java+Angular"**.
