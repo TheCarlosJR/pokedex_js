@@ -1,0 +1,141 @@
+
+.search_line {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.search_line .search_bar {
+    display: flex;
+    flex-direction: row;
+    width: 50vw;
+    margin-right: 5px;
+}
+
+#edit_search {
+    width: 90%;
+}
+
+.search_line .search_opt {
+    width: 70px;
+}
+
+.page_nav,
+.page_nav2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#pokemons {
+    display: grid;
+    grid-template-columns: 1fr;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pokemon {
+    display: flex;
+    flex-direction: column;
+    margin: .5rem auto;
+    padding: .8rem;
+    border-radius: 1rem;
+    background-color: #a6a877;
+    background-image: url("/assets/img/pokeball-banner-maratuna-light.png");
+    background-position: 102% 4rem;
+    background-size: 6rem;
+    background-repeat: no-repeat;
+    min-width: 150px;
+    cursor: pointer;
+}
+
+.pokemon .pokemon_banner {
+    display: none;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 1;
+    z-index: 9;
+    top: 0;
+    left: 0;
+}
+
+.pokemon .poke_number {
+    color: rgba(0,0,0,0.6);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: .625rem;
+}
+
+.pokemon .poke_number span:first-child {
+    flex-grow:1;
+}
+
+.pokemon .poke_name {
+    margin-bottom: .25rem;
+    color: white;
+    text-transform: capitalize;
+}
+
+.pokemon .poke_types {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.pokemon .poke_type {
+    border-radius: 1rem;
+    margin: .125rem 0;
+    padding: .25rem .5rem;
+    background-color: rgba(255,255,255,0.35);
+    color: white;
+    font-size: .625rem;
+    text-transform: capitalize;
+}
+
+.pokemon .poke_detail {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pokemon .poke_detail img {
+    max-width: 70px;
+    height: 70px;
+}
+
+@media screen and (min-width: 350px) {
+    #pokemons {
+        grid-template-columns: 1fr 1fr;
+    }
+    .pokemon {
+        margin: .5rem;
+        padding: .8rem;
+    }
+}
+
+@media screen and (min-width: 426px) {
+    .page_nav {
+        justify-content: center;
+    }
+    .page_nav2 {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    #pokemons {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #pokemons {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pokedex JS - Details</title>
+        <!-- mantem compatibilidade entre navegadores fazendo um estilo universal -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+            integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- fonte roboto do google -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+        <!-- arquivo css local customizado -->
+        <link rel="stylesheet" href="/assets/css/global.css">
+        <link rel="stylesheet" href="/assets/css/poketypes.css">
+        <link rel="stylesheet" href="/assets/css/pokedetail.css">
+    </head>
+<body>
+    <section class="details_body">
+        <div id="poke_content" class="details_content">
+            <div class="details_menu">
+                <button id="btn_back" class="icon_btn">
+                    <img src="/assets/img/icons8-a-esquerda-dentro-de-um-círculo-96.png" alt="back" />
+                </button>
+                <button id="btn_heart" class="icon_btn">
+                    <img id="img_heart_empty" src="/assets/img/icons8-heart-96.png" alt="like" />
+                    <img id="img_heart_full" class="content_hide" src="/assets/img/icons8-filled-heart-96.png" alt="unlike" />
+                </button>
+            </div>
+
+            <div class="details_frame">
+                <div>
+                    <span id="poke_name">???</span>
+                    <span id="poke_id">#000000</span>
+                </div>
+                <!-- https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg -->
+                <img id="main_sprite" src="/assets/img/icons8-question-100.png" />
+            </div>
+            
+            <div class="details_info">
+                <div class="details_tabs">
+                    <button id="btn_tab1" class="details_tabs_btn_down">About</button>
+                    <button id="btn_tab2" class="details_tabs_btn_normal">Stats</button>
+                    <button id="btn_tab3" class="details_tabs_btn_normal">Evolves</button>
+                    <button id="btn_tab4" class="details_tabs_btn_normal">Moves</button>
+                </div>
+                <div class="details_tabs_body">
+                    <table id="tab_body1" class="details_table">
+                        <tr>
+                            <th>Base Exp</th>
+                            <td id="poke_base_exp">?</td>
+                        </tr>
+                        <tr>
+                            <th>Height</th>
+                            <td id="poke_height">?</td> 
+                        </tr>
+                        <tr>
+                            <th>Weight</th>
+                            <td id="poke_weight">?</td>
+                        </tr>
+                        <tr>
+                            <th>Body</th>
+                            <td id="poke_body">?</td>
+                        </tr>
+                        <tr>
+                            <th>Habitat</th>
+                            <td id="poke_habitat">?</td>
+                        </tr>
+                        <tr>
+                            <th>Gen</th>
+                            <td id="poke_gen">?</td>
+                        </tr>
+                        <tr>
+                            <th>Abilities</th>
+                            <td id="poke_abilities">?</td>
+                        </tr>
+                    </table>
+                    <table id="tab_body2" class="details_table content_hide">
+                        <tr>
+                            <th>HP</th>
+                            <td id="hpValue">?</td>
+                            <td><div id="hpBarBack"><div id="hpBar" class="stats_value_bar"></div></div></td>
+                        </tr>
+                        <tr>
+                            <th>Attack</th>
+                            <td id="atkValue">?</td>
+                            <td><div id="atkBarBack"><div id="atkBar" class="stats_value_bar"></div></div></td>
+                        </tr>
+                        <tr>
+                            <th>Defense</th>
+                            <td id="defValue">?</td>
+                            <td><div id="defBarBack"><div id="defBar" class="stats_value_bar"></div></div></td>
+                        </tr>
+                        <tr>
+                            <th>Sp. Attack</th>
+                            <td id="spAtkValue">?</td>
+                            <td><div id="spAtkBarBack"><div id="spAtkBar" class="stats_value_bar"></div></div></td>
+                        </tr>
+                        <tr>
+                            <th>Sp. Defense</th>
+                            <td id="spDefValue">?</td>
+                            <td><div id="spDefBarBack"><div id="spDefBar" class="stats_value_bar"></div></div></td>
+                        </tr>
+                        <tr>
+                            <th>Speed</th>
+                            <td id="spdValue">?</td>
+                            <td><div id="spdBarBack"><div id="spdBar" class="stats_value_bar"></div></div></td>
+                        </tr>
+                    </table>
+                    <table id="tab_body3" class="details_table content_hide">
+                        <tr>
+                            <th>Evolves to</th>
+                            <td id="evolves_to_value">?</td>
+                        </tr>
+                        <tr>
+                            <th>Level at</th>
+                            <td id="level_at_value">?</td>
+                        </tr>
+                        <tr>
+                            <th>Conditions</th>
+                            <td id="evolves_when_value">?</td>
+                        </tr>
+                    </table>
+                    <table id="tab_body4" class="details_table content_hide">
+                        <tr>
+                            <td><!-- apenas para compatibilidade --></td>
+                            <td>
+                                <ol id="poke_move_list">
+                                    <li>????</li>
+                                </ol>
+                                <div>
+                                    <button id="btn_prev_moves" class="icon_btn content_hide_space">
+                                        <img src="/assets/img/icons8-voltar-96.png" alt="previous move" />
+                                    </button>
+                                    <button id="btn_next_moves" class="icon_btn content_hide_space">
+                                        <img src="/assets/img/icons8-avancar-96.png" alt="next move" />
+                                    </button>
+                                </div>
+                            </th>
+                            <td><!-- apenas para compatibilidade --></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="icons8_line">
+                    Icons resources from <a target="_blank" href="https://www.icons8.com.br">Icons8</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="/assets/js/poke_model.js"></script>
+    <script src="/assets/js/poke_api.js"></script>
+    <script src="/assets/js/pg_pokemon.js"></script>
+</body>
+</html>

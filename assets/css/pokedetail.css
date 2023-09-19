@@ -1,0 +1,195 @@
+
+.details_body {
+    width:100vw;
+    height:100vh;
+    background-color: #818181;
+    padding: .5rem .5rem 0 .5rem;
+}
+
+.details_content {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    justify-content: start;
+    border-radius: 1.5rem 1.5rem 0 0;
+    /*background-color: #1ACAA8;*/
+    background-image: url("/assets/img/pokeball-banner-maratuna-light.png");
+    background-position: 4vw -5rem;
+    background-size: 25rem;
+    background-repeat: no-repeat;
+    padding: .8rem;
+    height: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.details_menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        font-size: .625rem;
+}
+
+.details_menu button img {
+    height: 2.5rem;
+}
+
+.details_frame {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: -2rem;
+}
+
+.details_frame div:first-child {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem;
+    width: 100%;
+    color: white;
+}
+
+.details_frame div span:first-child {
+    font-size: 1.8rem;
+}
+
+#main_sprite {
+    height: 60vw;
+    max-height: 300px;
+    z-index: 10;
+}
+    
+.details_info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    border-radius: 2.5rem 2.5rem 0 0;
+    margin: -.8rem;
+    padding: 3.2rem .8rem .8rem .8rem;
+    background-color: white;
+    font-size: 1rem;
+}
+
+.details_tabs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 333px;
+    margin: 1rem auto;
+}
+
+.details_tabs button {
+    height: 3.5rem;
+    background-color: transparent;
+}
+
+.details_tabs_btn_normal {
+    border: none;
+    font-weight: normal;
+    color: #818181;
+}
+
+.details_tabs_btn_down {
+    border: none;
+    border-bottom: 5px solid rgb(33, 5, 189);
+    font-weight: bold;
+    color: black;
+}
+
+.details_tabs_body {
+    flex-grow: 1;
+}
+
+.details_table {
+    width: 100%;
+    max-width: 333px;
+    margin: 0 auto;
+}
+
+.details_table td, th {
+    padding: .3rem;
+}
+
+.details_table th {
+    text-align: left;
+}
+
+.details_table td {
+    text-align: center;
+}
+
+.details_table td:last-child {
+    text-align: right;
+}
+
+#poke_move_list {
+    padding: 0;
+    list-style: none;
+}
+
+#poke_move_list li {
+    text-transform: capitalize;
+    text-align: center;
+}
+
+#poke_name,
+#poke_body,
+#poke_habitat,
+#poke_gen,
+#poke_abilities,
+#evolves_to_value,
+#evolves_when_value {
+    text-transform: capitalize;
+}
+
+#hpBarBack,
+#atkBarBack,
+#defBarBack,
+#spAtkBarBack,
+#spDefBarBack,
+#spdBarBack {
+    display: inline-block;
+    width: 20vw;
+    height: 5px;
+    max-width: 150px;
+    background-color: rgb(68, 68, 68);
+    z-index: 2;
+}
+
+.stats_value_bar {
+    width: 30%;
+    height: 100%;
+    z-index: 1;
+}
+
+#hpBar,
+#atkBar,
+#defBar,
+#spAtkBar,
+#spDefBar,
+#spdBar {
+    width: 0%;
+}
+#hpBar {
+    background-color: #fe0000;
+}
+#atkBar {
+    background-color: #ea7e34;
+}
+#defBar {
+    background-color: #f8d030;
+}
+#spAtkBar {
+    background-color: #6890f2;
+}
+#spDefBar {
+    background-color: #78c750;
+}
+#spdBar {
+    background-color: #e63369;
+}
