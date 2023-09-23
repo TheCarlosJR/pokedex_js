@@ -9,7 +9,7 @@ Neste caso, a **Pokedex JS** é totalmente **interativa** e **adaptável** aos m
 
 O projeto foi desenvolvido com o objetivo de cumprir um desafio do `"Santander Bootcamp 2023 - Fullstack Java+Angular"`.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/U8xCVC_jpPk?si=ey4S334-XC6Mj9AV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+[Demonstração](https://youtu.be/U8xCVC_jpPk "Demonstração")
 
 ## Recursos deste aplicativo
 
